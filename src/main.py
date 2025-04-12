@@ -69,6 +69,7 @@ def result(img, no_plot=False, should_save=False, save_dpi=300, output_dir="../o
             print(f"Error saving image: {e}")
 
     if not no_plot:
+        print("Image displayed. Press 'q' to close the window")
         plt.show()
 
     return save_path
@@ -150,8 +151,7 @@ def main():
 
         if saved_path:
             print(f"Success! Image saved to: {saved_path}")
-        elif not args.no_plot:
-            print("Image displayed. Close the window to exit.")
+            
 
     except ValueError as e:
         print(f"Error: {e}")
